@@ -115,19 +115,19 @@ if run:
         # -------------------- DOWNLOAD --------------------
         col1, col2 = st.columns(2)
 
-        with col1:
-            st.download_button(
-                "⬇️ Download Full OI Data",
-                data=df.to_excel(index=False),
-                file_name=f"OI_Data_{date_input}.xlsx"
-            )
+        # with col1:
+        #     st.download_button(
+        #         "⬇️ Download Full OI Data",
+        #         data=df.to_excel(index=False),
+        #         file_name=f"OI_Data_{date_input}.xlsx"
+        #     )
 
-        with col2:
-            st.download_button(
-                "⬇️ Download OI Winners",
-                data=winners_df.to_excel(index=False),
-                file_name=f"OI_Winners_{date_input}.xlsx"
-            )
+        # with col2:
+        #     st.download_button(
+        #         "⬇️ Download OI Winners",
+        #         data=winners_df.to_excel(index=False),
+        #         file_name=f"OI_Winners_{date_input}.xlsx"
+        #     )
 
     except Exception as e:
         st.error("⚠️ Error fetching data. Check date or NSE availability.")
@@ -135,3 +135,4 @@ if run:
 
 else:
     st.info("👈 Set parameters and click **Run Screener**")
+
