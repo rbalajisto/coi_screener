@@ -10,6 +10,15 @@ st.set_page_config(
     layout="wide"
 )
 
+# ✅ ALLOW WORDPRESS EMBEDDING
+st.markdown("""
+<style>
+iframe {
+    display: block;
+}
+</style>
+""", unsafe_allow_html=True)
+
 # -------------------- CONSTANTS (FROM YOUR CODE) --------------------
 OptTp = 12
 CompanyTicker = 7
@@ -135,4 +144,5 @@ if run:
 
 else:
     st.info("👈 Set parameters and click **Run Screener**")
+
 
